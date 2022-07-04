@@ -45,7 +45,14 @@ public class GameManager : MonoBehaviour
     public GameObject player, bullet, bomb;
     public List<GameObject> enemies;
     public float difficulty = 1;
-    public int _scoreValue;
+    private int _scoreValue;
+    public int Score
+    {
+    get
+    {
+        return _scoreValue;
+    }
+    }
     private int cowsNumber = 0 , bullsNumber = 0;
     [SerializeField]
     public bool isGameActive, isPlayerAlive = false;
@@ -62,7 +69,7 @@ public class GameManager : MonoBehaviour
     // Frequency of spawning, this will get smaller as difficulty increases.
     private float spawnRate = 10.0f;
     //200 meters range to start and it decrements as difficulty increases ie they get closer.
-    private float spawnRange = 50;
+    private float spawnRange = 50.0f;
     private IAdaptivePerformance ap;
     #region ******************* Monobehaviour ********************
     private void Awake()
