@@ -29,7 +29,7 @@ using UnityEditor;
 
 public class GameManager : MonoBehaviour
 {
-	private static GameManager _instance;
+    private static GameManager _instance;
     public static GameManager Instance
     {
         get
